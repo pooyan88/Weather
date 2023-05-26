@@ -9,6 +9,8 @@ import UIKit
 
 extension UIColor {
     
+    static let darkBlue = UIColor(hex: "#222245")
+    
     convenience init(hex: String) {
         let hex = hex.trimmingCharacters(in: CharacterSet.alphanumerics.inverted)
         var int = UInt64()

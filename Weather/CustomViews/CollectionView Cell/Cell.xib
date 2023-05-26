@@ -43,15 +43,21 @@
                                     <constraint firstAttribute="width" secondItem="NYe-0J-SQw" secondAttribute="height" multiplier="1:1" id="GLN-y1-OvV"/>
                                 </constraints>
                             </imageView>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="3ob-8A-VGX">
+                                <rect key="frame" x="104" y="89" width="37" height="37"/>
+                                <color key="color" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </activityIndicatorView>
                         </subviews>
                         <constraints>
                             <constraint firstItem="KCn-Cb-rxe" firstAttribute="top" secondItem="NYe-0J-SQw" secondAttribute="top" id="75R-zd-7E0"/>
                             <constraint firstItem="1TV-Vf-KZF" firstAttribute="leading" secondItem="knV-3W-u05" secondAttribute="leading" id="99x-95-EGi"/>
                             <constraint firstAttribute="bottom" secondItem="1TV-Vf-KZF" secondAttribute="bottom" constant="10" id="QL6-LF-u1Q"/>
+                            <constraint firstItem="3ob-8A-VGX" firstAttribute="centerY" secondItem="oBG-S1-r51" secondAttribute="centerY" id="SDM-LU-dih"/>
                             <constraint firstItem="NYe-0J-SQw" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="KCn-Cb-rxe" secondAttribute="trailing" constant="10" id="SqV-r0-yTo"/>
                             <constraint firstItem="NYe-0J-SQw" firstAttribute="width" secondItem="oBG-S1-r51" secondAttribute="width" multiplier="0.4" id="TTs-jt-5qe"/>
                             <constraint firstItem="knV-3W-u05" firstAttribute="bottom" secondItem="NYe-0J-SQw" secondAttribute="bottom" id="WfR-1K-BvT"/>
                             <constraint firstItem="knV-3W-u05" firstAttribute="leading" secondItem="KCn-Cb-rxe" secondAttribute="leading" id="Zch-qb-nQP"/>
+                            <constraint firstItem="3ob-8A-VGX" firstAttribute="centerX" secondItem="oBG-S1-r51" secondAttribute="centerX" id="bNw-ck-HuJ"/>
                             <constraint firstAttribute="trailing" secondItem="NYe-0J-SQw" secondAttribute="trailing" constant="10" id="c0S-MA-qjh"/>
                             <constraint firstItem="NYe-0J-SQw" firstAttribute="top" secondItem="oBG-S1-r51" secondAttribute="top" constant="10" id="csc-M0-3Wd"/>
                             <constraint firstItem="KCn-Cb-rxe" firstAttribute="leading" secondItem="oBG-S1-r51" secondAttribute="leading" constant="10" id="jlS-3c-cC1"/>
@@ -69,6 +75,7 @@
             <size key="customSize" width="245" height="215"/>
             <connections>
                 <outlet property="countryNameLabel" destination="1TV-Vf-KZF" id="2h3-bH-bkW"/>
+                <outlet property="loadingIndicator" destination="3ob-8A-VGX" id="Oa0-RS-2Fr"/>
                 <outlet property="tempretureLabel" destination="KCn-Cb-rxe" id="xYl-aP-NVa"/>
                 <outlet property="weatherStatusImage" destination="NYe-0J-SQw" id="oTm-TT-3Ja"/>
                 <outlet property="weatherStatusLabel" destination="knV-3W-u05" id="LTm-5D-tEu"/>

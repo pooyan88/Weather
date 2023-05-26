@@ -12,6 +12,7 @@ class Cell: UICollectionViewCell {
     static let identifier = "Cell"
     static let cellsMargins: CGFloat = 15
     
+    @IBOutlet weak var dateLabel: UILabel!
     @IBOutlet weak var loadingIndicator: UIActivityIndicatorView!
     @IBOutlet weak var tempretureLabel: UILabel!
     @IBOutlet weak var weatherStatusLabel: UILabel!
@@ -33,11 +34,25 @@ extension Cell {
         contentView.backgroundColor = .superDarkBlue
     }
     
+    func convertDateToString(date: Date) -> String {
+        let formatter = DateFormatter()
+        formatter.locale = Locale(identifier: "en_US_POSIX")
+        formatter.dateFormat = "HH:mm:ss E"
+        let stringDate = formatter.string(from: date)
+        print("Date Converted To String ==>", stringDate)
+        return stringDate
+    }
+        
     func setup(at indexPath: IndexPath, data: WeatherResponse) {
         setupLoadingIndicatorAnimate(isAnimate: data.isLoadingNeedsToAppear ?? true)
         tempretureLabel.text = data.current.tempC?.description
         weatherStatusLabel.text = data.current.condition?.text
         countryNameLabel.text = data.location.name
+        if let date = data.date {
+            dateLabel.text = convertDateToString(date: date)
+        } else {
+            dateLabel.text = "Rid!!!!"
+        }
         if let url = data.current.condition?.icon {
             weatherStatusImage.download(from: url)
         } else {

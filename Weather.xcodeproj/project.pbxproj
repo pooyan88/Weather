@@ -23,6 +23,13 @@
 		E026C585295C7EB8000D1610 /* Cell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E026C583295C7EB8000D1610 /* Cell.swift */; };
 		E026C586295C7EB8000D1610 /* Cell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E026C584295C7EB8000D1610 /* Cell.xib */; };
 		E05DA7BD2965357A008B42D8 /* UIImageViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E05DA7BC2965357A008B42D8 /* UIImageViewExtension.swift */; };
+		E08134E929F6ACAC00DC242E /* DateExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E08134E829F6ACAC00DC242E /* DateExtension.swift */; };
+		E0B91D5829C1C7DC005A0A6A /* NetworkRequests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0B91D5729C1C7DC005A0A6A /* NetworkRequests.swift */; };
+		E0CAADFB29B5E520007A1A54 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0CAADFA29B5E520007A1A54 /* DataManager.swift */; };
+		E0CD1ABD29EEA80700D2441A /* AlertManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0CD1ABC29EEA80700D2441A /* AlertManager.swift */; };
+		E0CD1ABF29EED3F600D2441A /* UIViewControllerExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0CD1ABE29EED3F600D2441A /* UIViewControllerExtensions.swift */; };
+		E0CD1AC129F25E4B00D2441A /* CGFloatExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0CD1AC029F25E4B00D2441A /* CGFloatExtensions.swift */; };
+		E0CD1AC529F26CAD00D2441A /* Repository.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0CD1AC429F26CAD00D2441A /* Repository.swift */; };
 		E0ECB2F2296B0A960042DA04 /* WeatherResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0ECB2F1296B0A960042DA04 /* WeatherResponse.swift */; };
 		E0ECB2F4296B0ADE0042DA04 /* CityNameModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0ECB2F3296B0ADE0042DA04 /* CityNameModel.swift */; };
 /* End PBXBuildFile section */
@@ -65,6 +72,13 @@
 		E026C583295C7EB8000D1610 /* Cell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cell.swift; sourceTree = "<group>"; };
 		E026C584295C7EB8000D1610 /* Cell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Cell.xib; sourceTree = "<group>"; };
 		E05DA7BC2965357A008B42D8 /* UIImageViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageViewExtension.swift; sourceTree = "<group>"; };
+		E08134E829F6ACAC00DC242E /* DateExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateExtension.swift; sourceTree = "<group>"; };
+		E0B91D5729C1C7DC005A0A6A /* NetworkRequests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkRequests.swift; sourceTree = "<group>"; };
+		E0CAADFA29B5E520007A1A54 /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
+		E0CD1ABC29EEA80700D2441A /* AlertManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertManager.swift; sourceTree = "<group>"; };
+		E0CD1ABE29EED3F600D2441A /* UIViewControllerExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtensions.swift; sourceTree = "<group>"; };
+		E0CD1AC029F25E4B00D2441A /* CGFloatExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CGFloatExtensions.swift; sourceTree = "<group>"; };
+		E0CD1AC429F26CAD00D2441A /* Repository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Repository.swift; sourceTree = "<group>"; };
 		E0ECB2F1296B0A960042DA04 /* WeatherResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherResponse.swift; sourceTree = "<group>"; };
 		E0ECB2F3296B0ADE0042DA04 /* CityNameModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityNameModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -126,11 +140,11 @@
 		E026C54D295C244C000D1610 /* Weather */ = {
 			isa = PBXGroup;
 			children = (
-				E008B3CE29619C3400CEEB7B /* TableView Cell */,
-				E080DC6B2960358F000D0349 /* CollectionView Cell */,
-				E080DC6A295EBF93000D0349 /* Extensions */,
-				E080DC69295EBF79000D0349 /* View Controller */,
+				E0CD1ABB29EEA7D500D2441A /* Helpers */,
+				E0CD1AC329F26BC800D2441A /* Repository */,
 				E080DC68295EBF57000D0349 /* Models */,
+				E0CD1AC229F26B9000D2441A /* CustomViews */,
+				E080DC69295EBF79000D0349 /* View Controller */,
 				E026C54E295C244C000D1610 /* AppDelegate.swift */,
 				E026C550295C244C000D1610 /* SceneDelegate.swift */,
 				E026C554295C244C000D1610 /* Main.storyboard */,
@@ -179,8 +193,11 @@
 		E080DC6A295EBF93000D0349 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				E0CD1AC029F25E4B00D2441A /* CGFloatExtensions.swift */,
 				E026C581295C55B9000D1610 /* UIColorExtention.swift */,
 				E05DA7BC2965357A008B42D8 /* UIImageViewExtension.swift */,
+				E0CD1ABE29EED3F600D2441A /* UIViewControllerExtensions.swift */,
+				E08134E829F6ACAC00DC242E /* DateExtension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -192,6 +209,50 @@
 				E026C584295C7EB8000D1610 /* Cell.xib */,
 			);
 			path = "CollectionView Cell";
+			sourceTree = "<group>";
+		};
+		E0B91D5629C1C70C005A0A6A /* Network Layer */ = {
+			isa = PBXGroup;
+			children = (
+				E0B91D5729C1C7DC005A0A6A /* NetworkRequests.swift */,
+			);
+			path = "Network Layer";
+			sourceTree = "<group>";
+		};
+		E0CAADF929B5E50B007A1A54 /* DataManager */ = {
+			isa = PBXGroup;
+			children = (
+				E0CAADFA29B5E520007A1A54 /* DataManager.swift */,
+			);
+			path = DataManager;
+			sourceTree = "<group>";
+		};
+		E0CD1ABB29EEA7D500D2441A /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				E080DC6A295EBF93000D0349 /* Extensions */,
+				E0CD1ABC29EEA80700D2441A /* AlertManager.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		E0CD1AC229F26B9000D2441A /* CustomViews */ = {
+			isa = PBXGroup;
+			children = (
+				E080DC6B2960358F000D0349 /* CollectionView Cell */,
+				E008B3CE29619C3400CEEB7B /* TableView Cell */,
+			);
+			path = CustomViews;
+			sourceTree = "<group>";
+		};
+		E0CD1AC329F26BC800D2441A /* Repository */ = {
+			isa = PBXGroup;
+			children = (
+				E0CD1AC429F26CAD00D2441A /* Repository.swift */,
+				E0CAADF929B5E50B007A1A54 /* DataManager */,
+				E0B91D5629C1C70C005A0A6A /* Network Layer */,
+			);
+			path = Repository;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -328,13 +389,20 @@
 			buildActionMask = 2147483647;
 			files = (
 				E05DA7BD2965357A008B42D8 /* UIImageViewExtension.swift in Sources */,
+				E08134E929F6ACAC00DC242E /* DateExtension.swift in Sources */,
 				E008B3D129619C4B00CEEB7B /* TableViewCell.swift in Sources */,
+				E0CAADFB29B5E520007A1A54 /* DataManager.swift in Sources */,
 				E026C559295C244C000D1610 /* Weather.xcdatamodeld in Sources */,
+				E0CD1AC129F25E4B00D2441A /* CGFloatExtensions.swift in Sources */,
 				E026C553295C244C000D1610 /* WeatherViewController.swift in Sources */,
+				E0CD1ABD29EEA80700D2441A /* AlertManager.swift in Sources */,
+				E0CD1ABF29EED3F600D2441A /* UIViewControllerExtensions.swift in Sources */,
 				E026C582295C55B9000D1610 /* UIColorExtention.swift in Sources */,
 				E0ECB2F4296B0ADE0042DA04 /* CityNameModel.swift in Sources */,
 				E026C54F295C244C000D1610 /* AppDelegate.swift in Sources */,
+				E0CD1AC529F26CAD00D2441A /* Repository.swift in Sources */,
 				E026C551295C244C000D1610 /* SceneDelegate.swift in Sources */,
+				E0B91D5829C1C7DC005A0A6A /* NetworkRequests.swift in Sources */,
 				E0ECB2F2296B0A960042DA04 /* WeatherResponse.swift in Sources */,
 				E026C585295C7EB8000D1610 /* Cell.swift in Sources */,
 			);
@@ -442,7 +510,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -496,7 +564,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -513,13 +581,18 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = NA979M4P72;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Weather/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIRequiresFullScreen = NO;
+				INFOPLIST_KEY_UIStatusBarStyle = UIStatusBarStyleLightContent;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UIUserInterfaceStyle = Light;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -540,13 +613,18 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = NA979M4P72;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Weather/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIRequiresFullScreen = NO;
+				INFOPLIST_KEY_UIStatusBarStyle = UIStatusBarStyleLightContent;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UIUserInterfaceStyle = Light;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

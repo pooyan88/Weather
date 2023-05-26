@@ -8,15 +8,17 @@
 import Foundation
 
 struct WeatherResponse: Codable {
-    let location: Location
-    let current: Current
-    let forecast: Forecast
+    var location: Location
+    var current: Current
+    var forecast: Forecast
+    var isLoadingNeedsToAppear: Bool?
+    var date: Date?
 }
 
 // MARK: - Current
 struct Current: Codable {
     
-    let tempC: Double?
+    var tempC: Double?
     let condition: Condition?
  
     enum CodingKeys: String, CodingKey {
@@ -80,7 +82,7 @@ struct Hour: Codable {
 // MARK: - Location
 struct Location: Codable {
     
-    let name, region, country: String?
+    var name, region, country: String?
     let lat, lon: Double?
 
     enum CodingKeys: String, CodingKey {
@@ -88,3 +90,17 @@ struct Location: Codable {
     }
 }
 
+extension [WeatherResponse] {
+    
+    mutating func updateLoadingsState(isLoading: Bool) {
+        for i in 0..<self.count {
+            self[i].isLoadingNeedsToAppear = isLoading
+        }
+    }
+    
+   mutating func updateDate() {
+        for i in 0..<self.count {
+            self[i].date = Date()
+        }
+    }
+}

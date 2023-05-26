@@ -6,3 +6,10 @@
 //
 
 import Foundation
+
+extension CGFloat {
+    
+    static let smallCornerRadius: CGFloat = 5
+    static let regularCornerRadius: CGFloat = 10
+    static let largeCornerRadius: CGFloat = 20
+}

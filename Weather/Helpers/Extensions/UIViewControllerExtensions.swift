@@ -18,4 +18,15 @@ extension UIViewController {
     @objc func dismissKeyboard() {
         view.endEditing(true)
     }
+    
+    func showNetworkError(error: NetworkRequests.MyError) {
+        switch error {
+        case .decodeError:
+            AlertManager.shared.showAlert(alertTitle: "Error", alertDescription: "Decode Error", alertConfirmationButtonTitle: "OK", view: self)
+        case .serverError:
+            AlertManager.shared.showAlert(alertTitle: "Error", alertDescription: "Server Error", alertConfirmationButtonTitle: "OK", view: self)
+        case .urlError:
+            AlertManager.shared.showAlert(alertTitle: "Error", alertDescription: "Try Again", alertConfirmationButtonTitle: "OK", view: self)
+        }
+    }
 }
